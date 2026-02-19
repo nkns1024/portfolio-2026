@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio | 中西 晏志</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --muted: #8b949e;
+      --text: #c9d1d9;
+      --accent: #58a6ff;
+      --accent-soft: rgba(88, 166, 255, 0.1);
+      --line: #30363d;
+      --primary: #1f6feb;
+      --white: #f0f6fc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 60px 24px; }
+    header { border-bottom: 1px solid var(--line); padding-bottom: 40px; margin-bottom: 60px; }
+    h1 { font-size: 2.5rem; margin: 0; color: var(--white); letter-spacing: 0.05em; }
+    .catchphrase { font-size: 1.4rem; color: var(--accent); margin-top: 10px; font-weight: 700; }
+    
+    section { margin-bottom: 90px; }
+    h2 { font-size: 1.8rem; margin-bottom: 35px; color: var(--white); display: flex; align-items: center; }
+    h2::after { content: ""; flex: 1; height: 1px; background: var(--line); margin-left: 20px; }
+
+    .about-box { background: var(--card); border: 1px solid var(--line); padding: 35px; border-radius: 12px; }
+    .about-box strong { color: var(--accent); font-size: 1.3rem; display: block; margin-bottom: 12px; }
+
+    .project { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 45px; margin-bottom: 50px; }
+    .project-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 25px; }
+    .project-title { font-size: 2.2rem; color: var(--accent); margin: 0; }
+    .project-meta { color: var(--muted); font-size: 1rem; }
+
+    .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; margin-top: 30px; }
+    @media (max-width: 850px) { .spec-grid { grid-template-columns: 1fr; } }
+
+    .spec-item h4 { margin: 0 0 15px 0; font-size: 1.2rem; color: var(--white); display: flex; align-items: center; }
+    .spec-item h4::before { content: "▹"; margin-right: 10px; color: var(--accent); }
+    .spec-item p, .spec-item li { font-size: 0.98rem; color: var(--text); }
+    
+    .one-line { background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 18px 25px; margin: 25px 0; font-weight: 700; color: var(--white); border-radius: 0 8px 8px 0; font-size: 1.1rem; }
+    
+    .badge { display: inline-block; background: var(--line); padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; margin-right: 10px; color: var(--white); font-weight: 600; }
+    .badge-primary { background: var(--primary); }
+
+    .image-placeholder { background: #0d1117; border: 1px solid var(--line); height: 320px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--muted); margin-bottom: 30px; font-weight: 600; font-size: 1.1rem; }
+    
+    footer { text-align: center; padding: 80px 0; color: var(--muted); font-size: 0.95rem; border-top: 1px solid var(--line); }
+    ul { padding-left: 1.2rem; margin: 12px 0; }
+    li { margin-bottom: 10px; }
+    .truth-box { margin-top: 15px; font-size: 0.92rem; color: var(--muted); font-style: italic; }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <h1>中西 晏志</h1>
+    <div class="catchphrase">目的から逆算して学び、面白さをゲームとして形にします。</div>
+  </header>
+
+  <section id="about">
+    <h2>私について</h2>
+    <div class="about-box">
+      <strong>「『面白さ』の構造を問い、領域を越境して取り組む。」</strong>
+        <p>
+          大学生活では、自分の好奇心に従ってさまざまな領域に挑戦してきました。<br>
+          その中で、「面白さはどのように成立するのか」を問い続け、試作と検証を重ねてきました。
+        </p>
+        <p>
+          思考ばかりが先行して前に進めなくなることや、<br>
+          遠回りを重ねることもありました。
+        </p>
+        <p>
+          それでも違和感を放置せず、<br>
+          目的を整え直し、手を動かしながら確かめてきました。
+        </p>
+        <p>
+          その積み重ねの中で、<br>
+          チームメンバーそれぞれが思い描く体験を共有可能な形へ整理し、<br>
+          具体化していく役割を担うことが、現在の制作の軸になっています。
+        </p>
+        <p>
+          自分の方法や立ち位置も更新しながら、<br>
+          企画と実装のあいだを往復し、体験を形にしています。
+        </p>
+    </div>
+  </section>
+
+  <section id="works">
+    <h2>制作実績</h2>
+
+  <article class="project">
+    <div class="project-header">
+      <h3 class="project-title">HomeSpy</h3>
+      <span class="project-meta">2025/12 - 制作中 / 担当：企画・実装・検証</span>
+    </div>
+
+    <div class="one-line">
+      「面白い」という感覚を、現実空間で成立する構造へ落とし込んだ対戦型宝探しゲーム。
+    </div>
+
+    <div class="image-placeholder">【画像：赤外線タレット・Flutterアプリ】</div>
+
+    <div>
+      <span class="badge badge-primary">企画・体験設計</span>
+      <span class="badge">Flutter</span>
+      <span class="badge">Firebase</span>
+      <span class="badge">ESP32</span>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-item">
+        <h4>面白さをどう構造にしたか</h4>
+        <p>
+          「スパイ体験」という抽象的なワクワクを、
+          役割・罠・探索という具体的なルールへと分解し、
+          現実空間で再現可能な形に組み立てました。
+        </p>
+        <p>
+          面白さを感覚のままにせず、
+          <strong>何が選択になり、何が読み合いになるのか</strong>を整理しながら設計しています。
+        </p>
+      </div>
+
+      <div class="spec-item">
+        <h4>試行錯誤の中での発見</h4>
+        <p>
+          自由度を増やす設計も試しましたが、
+          検証を通じて「適度な制約がある方が思考が活発になる」ことを学びました。
+        </p>
+        <p>
+          制約や条件をどう置くかによって、
+          プレイヤーの行動や心理の動きが変わることを実感しました。
+        </p>
+      </div>
+
+      <div class="spec-item">
+        <h4>担当</h4>
+        <ul>
+          <li>体験設計・ルール構造の整理</li>
+          <li>デバイス・アプリ・同期の実装</li>
+          <li>検証と反復調整</li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+
+
+
+    <article class="project">
+      <div class="project-header">
+        <h3 class="project-title">陰キャ勇者</h3>
+        <span class="project-meta">1週間 (Unity1week) / 担当：ディレクター・プログラマー</span>
+      </div>
+      <div class="one-line">「未完成」で終わらせないための判断と、手触りへのリソース集中</div>
+      <div class="image-placeholder">【画像：操作キャラが視認できない独特なゲーム画面】</div>
+      <div>
+        <span class="badge badge-primary">ディレクション</span>
+        <span class="badge">Unity (C#)</span><span class="badge">スコープ管理</span>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-item">
+          <h4>「完成」への責任とシミュレーション</h4>
+          <p>
+            1週間という極限の納期で、チームが「未完成」に終わる恐怖を回避するため、ディレクターとして「こだわりを捨てる」判断を徹底しました。
+            「遊べる状態の成立」を最優先にしつつ、プレイヤーが最も触れる「ジャンプの感触」だけにリソースを集中投下。
+            キャラが見えない分、画面の揺れやSEといった微細なフィードバックをシミュレートし、体験の核を死守しました。
+          </p>
+        </div>
+        <div class="spec-item">
+          <h4>チームのボトルネックを解消する</h4>
+          <ul>
+            <li><strong>コミュニケーションコストの削減：</strong> 認識のズレが作業を止めることを防ぐため、仕様を短い言葉で揃え、常に現状を可視化。</li>
+            <li><strong>モチベーションの維持：</strong> プログラマーとして「触ってすぐに面白い」感触を早期に提供し、メンバーが本来の仕事に集中できる環境を死守しました。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-header">
+        <h3 class="project-title">脱獄スロース</h3>
+        <span class="project-meta">4ヶ月 / 担当：プログラマー</span>
+      </div>
+      <div class="one-line">迷いを想定した「防衛的」設計と、職種間の隙間を埋める「間の仕事」</div>
+      <div class="image-placeholder">【画像：スイング挙動の可視化ツール・パラメータ調整画面】</div>
+      <div>
+        <span class="badge badge-primary">コンポーネント指向</span>
+        <span class="badge">Unity (C#)</span><span class="badge">ツール開発</span>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-item">
+          <h4>試行錯誤を支える実装構造</h4>
+          <p>
+            「スイング移動の気持ちよさ」は数値の微調整で見つかるもの。仕様が二転三転することをあらかじめ想定し、スクリプトの付け替えだけで挙動を変更できる「コンポーネント指向」を徹底しました。
+            外部パラメータ化により、エンジニア以外の職種でもリアルタイムで数値を微調整できる環境を作り、試行錯誤の回転数を最大化させました。
+          </p>
+        </div>
+        <div class="spec-item">
+          <h4>職種間の隙間を埋める役割</h4>
+          <ul>
+            <li><strong>可視化による伝達：</strong> プランナーが調整に専念できるよう、当たり判定や移動軌跡を可視化するエディタ拡張を自作。</li>
+            <li><strong>間の仕事：</strong> 仕様書の不足を補い、職種間の「言い淀み」を実装で先回りして解消するなど、チーム全体のボトルネックを自発的に取り除き続けました。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <section id="experience">
+  <h2>「Input」と「伝達」の経験</h2>
+  
+  <div class="spec-grid">
+    <div class="project" style="margin:0;">
+      <h3 style="margin:0 0 15px 0; color:var(--white);">映像制作</h3>
+      <p class="one-line">3.5年 / 20本以上の制作</p>
+      <div class="spec-item">
+        <p>
+          映像制作は、自分の感覚をどのように他者へ伝えるかを考え続ける時間でした。
+        </p>
+        <ul>
+          <li><strong>予測と検証：</strong> テンポや色、カットの順序を調整しながら、「視線はどう動くか」「どこで感情が生まれるか」を検証。</li>
+          <li><strong>翻訳の視点：</strong> 一人目の観客として自作を疑い、迷わず理解できる構造へ整える。この視点はゲームのUI/UX設計にも活かされています。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="project" style="margin:0;">
+      <h3 style="margin:0 0 15px 0; color:var(--white);">BitSummit</h3>
+      <p class="one-line">2年連続参加 / 展示現場でのフィードバック</p>
+      <div class="spec-item">
+        <p>
+          実際のプレイヤーの反応から、自分の想定とのズレを学びました。
+        </p>
+        <ul>
+          <li><strong>観察：</strong> どこで迷い、どこで理解が止まるのかをその場で確認。</li>
+          <li><strong>修正：</strong> UIや演出を即時に調整し、より直感的に伝わる形へ改善。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="about-box" style="margin-top: 30px;">
+    <strong>中西 晏志における「Input」と「伝達」</strong>
+    音楽、映像、広告、電子工作など、異なる分野で得た経験は、
+    制作において「相手がどう感じ、どう行動するか」を考える材料になっています。
+    自分の感覚をそのまま押し出すのではなく、
+    それを他者が体験として受け取れる形へと整理することを大切にしています。
+</div>
+
+  </section>
+
+  <footer>
+    <p>
+      適材適所を“探す”のではなく、自らの力で“作る”側に立ちます。<br>
+      この資料も、私の制作姿勢を伝えるための一つの形です。。<br>
+      中西 晏志 - Portfolio
+    </p>
+  </footer>
+</div>
+
+</body>
+</html>
