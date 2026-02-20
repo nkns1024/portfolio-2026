@@ -4,62 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portfolio | 中西 晏志</title>
-  <style>
-    :root {
-      --bg: #0d1117;
-      --card: #161b22;
-      --muted: #8b949e;
-      --text: #c9d1d9;
-      --accent: #58a6ff;
-      --accent-soft: rgba(88, 166, 255, 0.1);
-      --line: #30363d;
-      --primary: #1f6feb;
-      --white: #f0f6fc;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-    .wrap { max-width: 1000px; margin: 0 auto; padding: 60px 24px; }
-    header { border-bottom: 1px solid var(--line); padding-bottom: 40px; margin-bottom: 60px; }
-    h1 { font-size: 2.5rem; margin: 0; color: var(--white); letter-spacing: 0.05em; }
-    .catchphrase { font-size: 1.4rem; color: var(--accent); margin-top: 10px; font-weight: 700; }
-    
-    section { margin-bottom: 90px; }
-    h2 { font-size: 1.8rem; margin-bottom: 35px; color: var(--white); display: flex; align-items: center; }
-    h2::after { content: ""; flex: 1; height: 1px; background: var(--line); margin-left: 20px; }
-
-    .about-box { background: var(--card); border: 1px solid var(--line); padding: 35px; border-radius: 12px; }
-    .about-box strong { color: var(--accent); font-size: 1.3rem; display: block; margin-bottom: 12px; }
-
-    .project { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 45px; margin-bottom: 50px; }
-    .project-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 25px; }
-    .project-title { font-size: 2.2rem; color: var(--accent); margin: 0; }
-    .project-meta { color: var(--muted); font-size: 1rem; }
-
-    .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; margin-top: 30px; }
-    @media (max-width: 850px) { .spec-grid { grid-template-columns: 1fr; } }
-
-    .spec-item h4 { margin: 0 0 15px 0; font-size: 1.2rem; color: var(--white); display: flex; align-items: center; }
-    .spec-item h4::before { content: "▹"; margin-right: 10px; color: var(--accent); }
-    .spec-item p, .spec-item li { font-size: 0.98rem; color: var(--text); }
-    
-    .one-line { background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 18px 25px; margin: 25px 0; font-weight: 700; color: var(--white); border-radius: 0 8px 8px 0; font-size: 1.1rem; }
-    
-    .badge { display: inline-block; background: var(--line); padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; margin-right: 10px; color: var(--white); font-weight: 600; }
-    .badge-primary { background: var(--primary); }
-
-    .image-placeholder { background: #0d1117; border: 1px solid var(--line); height: 320px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--muted); margin-bottom: 30px; font-weight: 600; font-size: 1.1rem; }
-    
-    footer { text-align: center; padding: 80px 0; color: var(--muted); font-size: 0.95rem; border-top: 1px solid var(--line); }
-    ul { padding-left: 1.2rem; margin: 12px 0; }
-    li { margin-bottom: 10px; }
-    .truth-box { margin-top: 15px; font-size: 0.92rem; color: var(--muted); font-style: italic; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -110,7 +55,18 @@
       「面白い」という感覚を、現実空間で成立する構造へ落とし込んだ対戦型宝探しゲーム。
     </div>
 
-    <div class="image-placeholder">【画像：赤外線タレット・Flutterアプリ】</div>
+    <img class="project-image" src="images/homespy/homespy_01.jpg" alt="HomeSpy screenshot" loading="lazy">
+
+    <div class="project-media">
+      <a href="https://www.youtube.com/watch?v=K27nOW2lJ9E" target="_blank" rel="noopener">
+        <img
+          src="https://img.youtube.com/vi/K27nOW2lJ9E/maxresdefault.jpg"
+          alt="HomeSpy 解説動画"
+          loading="lazy"
+        >
+      </a>
+      <p class="caption">▶ 解説・プレイ動画（約30秒）</p>
+    </div>
 
     <div>
       <span class="badge badge-primary">企画・体験設計</span>
@@ -140,19 +96,41 @@
           検証を通じて「適度な制約がある方が思考が活発になる」ことを学びました。
         </p>
         <p>
-          制約や条件をどう置くかによって、
-          プレイヤーの行動や心理の動きが変わることを実感しました。
+          「読み合い」の密度を保つために、
+          観察→仮説→プロトタイプ→現場テストのサイクルを短く回しています。
         </p>
       </div>
 
-      <div class="spec-item">
-        <h4>担当</h4>
-        <ul>
-          <li>体験設計・ルール構造の整理</li>
-          <li>デバイス・アプリ・同期の実装</li>
-          <li>検証と反復調整</li>
-        </ul>
+    </div>
+
+    <div class="device-carousel">
+      <div class="carousel-header">
+        <h4>デバイス写真</h4>
+        <div class="carousel-nav">
+          <button class="carousel-btn" data-dir="-1" aria-label="前へ">‹</button>
+          <button class="carousel-btn" data-dir="1" aria-label="次へ">›</button>
+        </div>
       </div>
+      <div class="carousel-viewport" data-carousel="device-carousel">
+        <figure class="carousel-slide is-active">
+          <img src="images/homespy/device/S__94404619_0.jpg" alt="HomeSpy デバイス写真 1" loading="lazy">
+        </figure>
+        <figure class="carousel-slide">
+          <img src="images/homespy/device/S__94404621_0.jpg" alt="HomeSpy デバイス写真 2" loading="lazy">
+        </figure>
+        <figure class="carousel-slide">
+          <img src="images/homespy/device/S__94404623_0.jpg" alt="HomeSpy デバイス写真 3" loading="lazy">
+        </figure>
+        <figure class="carousel-slide">
+          <img src="images/homespy/device/S__94404625_0.jpg" alt="HomeSpy デバイス写真 4" loading="lazy">
+        </figure>
+        <figure class="carousel-slide">
+          <img src="images/homespy/device/S__94404628_0.jpg" alt="HomeSpy デバイス写真 5" loading="lazy">
+        </figure>
+      </div>
+      <p class="caption">筐体、配線、センサー配置を検証したプロトタイプ群。屋外運用や視認性テストを想定して作り、移動・設置のしやすさを重視しています。</p>
+    </div>
+
     </div>
   </article>
 
@@ -218,14 +196,14 @@
       </div>
     </article>
 
-  </section>
+</section>
 
   <section id="experience">
   <h2>「Input」と「伝達」の経験</h2>
   
   <div class="spec-grid">
-    <div class="project" style="margin:0;">
-      <h3 style="margin:0 0 15px 0; color:var(--white);">映像制作</h3>
+    <div class="project project-no-margin">
+      <h3 class="experience-title">映像制作</h3>
       <p class="one-line">3.5年 / 20本以上の制作</p>
       <div class="spec-item">
         <p>
@@ -238,8 +216,8 @@
       </div>
     </div>
 
-    <div class="project" style="margin:0;">
-      <h3 style="margin:0 0 15px 0; color:var(--white);">BitSummit</h3>
+    <div class="project project-no-margin">
+      <h3 class="experience-title">BitSummit</h3>
       <p class="one-line">2年連続参加 / 展示現場でのフィードバック</p>
       <div class="spec-item">
         <p>
@@ -255,7 +233,7 @@
 </section>
 
 
-  <div class="about-box" style="margin-top: 30px;">
+  <div class="about-box about-box-top">
     <strong>中西 晏志における「Input」と「伝達」</strong>
     音楽、映像、広告、電子工作など、異なる分野で得た経験は、
     制作において「相手がどう感じ、どう行動するか」を考える材料になっています。
@@ -268,11 +246,40 @@
   <footer>
     <p>
       適材適所を“探す”のではなく、自らの力で“作る”側に立ちます。<br>
-      この資料も、私の制作姿勢を伝えるための一つの形です。。<br>
+      この資料も、私の制作姿勢を伝えるための一つの形です。<br>
       中西 晏志 - Portfolio
     </p>
   </footer>
 </div>
+
+<script>
+  (() => {
+    const carousels = document.querySelectorAll('.device-carousel');
+    carousels.forEach((carousel) => {
+      const viewport = carousel.querySelector('.carousel-viewport');
+      const slides = Array.from(
+        viewport?.querySelectorAll('.carousel-slide') || []
+      );
+      let index = 0;
+f      const show = (i) => {
+        index = (i + slides.length) % slides.length;
+        slides.forEach((s, idx) =>
+          s.classList.toggle('is-active', idx === index)
+        );
+      };
+
+      const buttons = carousel.querySelectorAll('.carousel-btn');
+      buttons.forEach((btn) =>
+        btn.addEventListener('click', () => {
+          const dir = Number(btn.dataset.dir || 1);
+          show(index + dir);
+        })
+      );
+
+      show(0);
+    });
+  })();
+</script>
 
 </body>
 </html>
