@@ -265,16 +265,16 @@ h1 {
 .tile-sloth:focus {
   transform: rotate(-5deg) translateY(-3px);
 }
-.tile-bitsummit {
+.tile-overbreathe {
   left: -10px;
   bottom: 26px;
-  width: 32%;
-  height: 20%;
-  z-index: 0;
+  width: 38%;
+  height: 23%;
+  z-index: 3;
   transform: rotate(-6deg);
 }
-.tile-bitsummit:hover,
-.tile-bitsummit:focus {
+.tile-overbreathe:hover,
+.tile-overbreathe:focus {
   transform: rotate(-6deg) translateY(-3px);
 }
 .tile-video {
@@ -944,11 +944,11 @@ p {
   .tile-sloth {
     display: none;
   }
-  .tile-bitsummit {
+  .tile-overbreathe {
     left: -4px;
     bottom: 76px;
-    width: 36%;
-    height: 20%;
+    width: 42%;
+    height: 22%;
   }
   .tile-video {
     right: 8px;
