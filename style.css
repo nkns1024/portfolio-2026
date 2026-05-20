@@ -180,82 +180,113 @@ h1 {
 .hero-showcase {
   position: relative;
   z-index: 1;
-  min-height: 460px;
+  min-height: 500px;
 }
 .hero-showcase::before {
   content: "";
   position: absolute;
-  inset: 28px -18px -18px 28px;
-  border: 1px solid rgba(107, 182, 255, 0.18);
-  border-radius: 20px;
-  background: rgba(107, 182, 255, 0.035);
-  transform: rotate(2deg);
+  inset: 24px -12px -14px 42px;
+  border: 1px solid rgba(107, 182, 255, 0.12);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 68% 24%, rgba(107, 182, 255, 0.18), transparent 36%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.01));
+  transform: rotate(1.5deg);
 }
-.hero-work {
+.hero-poster {
   position: relative;
+  min-height: 500px;
+}
+.hero-poster-main,
+.hero-poster-tile {
+  position: absolute;
   display: block;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 18px;
-  background: var(--card-soft);
-  box-shadow: 0 28px 68px rgba(0, 0, 0, 0.44);
   text-decoration: none;
+}
+.hero-poster-main,
+.hero-poster-tile {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--card-soft);
+  box-shadow: 0 26px 64px rgba(0, 0, 0, 0.42);
+  overflow: hidden;
   transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
 }
-.hero-work:hover,
-.hero-work:focus {
-  transform: translateY(-4px);
-  border-color: rgba(107, 182, 255, 0.42);
-  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.42);
+.hero-poster-main {
+  inset: 36px 92px 44px 20px;
+  border-radius: 24px;
+  z-index: 1;
 }
-.hero-work img {
+.hero-poster-main:hover,
+.hero-poster-main:focus,
+.hero-poster-tile:hover,
+.hero-poster-tile:focus {
+  transform: translateY(-3px);
+  border-color: rgba(107, 182, 255, 0.42);
+}
+.hero-poster-main img,
+.hero-poster-tile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-.hero-work::after {
+.hero-poster-main::after {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(3, 7, 12, 0.16), transparent 30%),
-    linear-gradient(180deg, transparent 42%, rgba(3, 7, 12, 0.9));
+    linear-gradient(180deg, rgba(3, 7, 12, 0.04), transparent 44%),
+    linear-gradient(180deg, transparent 52%, rgba(3, 7, 12, 0.88));
 }
-.hero-work-main {
-  height: 460px;
+.hero-poster-tile {
+  border-radius: 16px;
+  z-index: 2;
 }
-.hero-work-label,
-.hero-work strong,
-.hero-work small {
-  position: absolute;
-  z-index: 1;
-  left: 22px;
-  right: 22px;
+.tile-inkya {
+  top: 8px;
+  right: -10px;
+  width: 34%;
+  height: 23%;
+  transform: rotate(4deg);
 }
-.hero-work-label {
-  top: 22px;
-  right: auto;
-  display: inline-flex;
-  width: fit-content;
-  padding: 5px 11px;
-  border-radius: 999px;
-  color: #081018;
-  background: var(--accent);
-  font-size: 0.75rem;
-  font-weight: 800;
+.tile-inkya:hover,
+.tile-inkya:focus {
+  transform: rotate(4deg) translateY(-3px);
 }
-.hero-work strong {
-  bottom: 54px;
-  color: var(--white);
-  font-size: 2rem;
-  line-height: 1.25;
+.tile-sloth {
+  right: -18px;
+  bottom: 118px;
+  width: 31%;
+  height: 22%;
+  z-index: 0;
+  transform: rotate(-5deg);
 }
-.hero-work small {
+.tile-sloth:hover,
+.tile-sloth:focus {
+  transform: rotate(-5deg) translateY(-3px);
+}
+.tile-bitsummit {
+  left: -10px;
   bottom: 26px;
-  color: var(--text);
-  font-size: 0.98rem;
-  line-height: 1.4;
+  width: 32%;
+  height: 20%;
+  z-index: 0;
+  transform: rotate(-6deg);
+}
+.tile-bitsummit:hover,
+.tile-bitsummit:focus {
+  transform: rotate(-6deg) translateY(-3px);
+}
+.tile-video {
+  right: 18px;
+  bottom: 8px;
+  width: 35%;
+  height: 21%;
+  transform: rotate(3deg);
+}
+.tile-video:hover,
+.tile-video:focus {
+  transform: rotate(3deg) translateY(-3px);
 }
 
 section { margin-bottom: 84px; }
@@ -862,10 +893,13 @@ p {
     min-height: auto;
   }
   .hero-showcase {
-    min-height: auto;
+    min-height: 460px;
   }
-  .hero-work-main {
-    height: 360px;
+  .hero-poster {
+    min-height: 460px;
+  }
+  .hero-poster-main {
+    inset: 28px 88px 56px 16px;
   }
 }
 
@@ -877,7 +911,10 @@ p {
   h2 { font-size: 1.35rem; margin-bottom: 22px; }
   h2::after { margin-left: 14px; }
   section { margin-bottom: 58px; }
-  .catchphrase { font-size: 1.05rem; }
+  .catchphrase {
+    font-size: 1.55rem;
+    line-height: 1.35;
+  }
   .catchphrase br { display: none; }
   .hero-lead { font-size: 0.95rem; }
   .hero-actions { gap: 8px; }
@@ -885,33 +922,39 @@ p {
     width: 100%;
   }
   .hero-showcase {
-    min-height: auto;
+    min-height: 380px;
   }
   .hero-showcase::before {
-    inset: 18px -8px -10px 18px;
-    border-radius: 16px;
+    inset: 24px -8px -8px 20px;
+    border-radius: 18px;
   }
-  .hero-work-main {
-    height: 260px;
+  .hero-poster {
+    min-height: 380px;
   }
-  .hero-work-label {
+  .hero-poster-main {
+    inset: 0 0 92px 0;
+    border-radius: 18px;
+  }
+  .tile-inkya {
     top: 12px;
-    left: 12px;
-    right: 12px;
-    max-width: calc(100% - 24px);
+    right: -4px;
+    width: 40%;
+    height: 23%;
   }
-  .hero-work strong,
-  .hero-work small {
-    left: 12px;
-    right: 12px;
+  .tile-sloth {
+    display: none;
   }
-  .hero-work strong {
-    bottom: 42px;
-    font-size: 1.45rem;
+  .tile-bitsummit {
+    left: -4px;
+    bottom: 76px;
+    width: 36%;
+    height: 20%;
   }
-  .hero-work small {
-    bottom: 16px;
-    font-size: 0.86rem;
+  .tile-video {
+    right: 8px;
+    bottom: 10px;
+    width: 42%;
+    height: 22%;
   }
   .about-box,
   .project {
