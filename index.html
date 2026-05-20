@@ -8,29 +8,60 @@
 </head>
 <body>
 
+<div class="scroll-progress" aria-hidden="true">
+  <div class="scroll-progress-bar"></div>
+</div>
+
+<nav class="section-nav" aria-label="ページ内ナビゲーション">
+  <a href="#works">Works</a>
+  <a href="#experience">Experience</a>
+  <a href="#skills">Skills</a>
+  <a href="#core">Core</a>
+</nav>
+
 <div class="wrap">
   <header>
-    <h1>中西 晏志</h1>
-    <div class="catchphrase">挑戦と変化から学び、面白さをゲームとして形にします。</div>
+    <div class="hero-copy">
+      <p class="hero-kicker">Game Portfolio</p>
+      <h1>中西 晏志</h1>
+      <div class="catchphrase">面白さを考え、試し、<br>ゲームとして形にする。</div>
+      <p class="hero-lead">
+        企画・実装・調整を横断しながら、考えた面白さを遊べる体験へ落とし込んできました。
+      </p>
+      <div class="hero-actions">
+        <a class="hero-button primary" href="#works">制作実績を見る</a>
+      </div>
+    </div>
+
+    <div class="hero-showcase" aria-label="代表的な制作実績">
+      <a class="hero-work hero-work-main" href="https://store.steampowered.com/app/3585800/Keep_Digging/" target="_blank" rel="noopener">
+        <img src="images/KeepDigging/kd2header.jpg" alt="Keep Digging Version 2.0 メインビジュアル">
+        <span class="hero-work-label">Steam公開タイトル / Version 2.0</span>
+        <strong>Keep Digging</strong>
+        <small>Game Designer / QA</small>
+      </a>
+    </div>
   </header>
 
   <div class="about-box intro-box">
     <p class="intro-lead">
-      面白さの仮説を立て、構造化し、実装と検証を繰り返すことで体験を成立させます。<br>
-      企画・実装・調整を横断して制作を前に進めることができます。
+      企画、実装、UI、調整を横断しながら、遊びの仮説を作り、実際の反応を見て整えてきました。<br>
+      作品ごとに、考えたこと・試したこと・そこから得た学びを残しています。
     </p>
   </div>
 
   <section id="portfolio-note">
     <h2>本ポートフォリオについて</h2>
     <div class="about-box">
+      <p class="note-lead">
+        プレイヤーが何を理解し、どこで判断し、どの操作に手応えを感じるのかを考えながら制作してきました。
+      </p>
       <p>
-        現時点では特定の職種に自分を限定するのではなく、
-        面白さを成立させるために必要な領域へ柔軟に関わる姿勢を大切にしています。
-
-        本ポートフォリオでは、
-        どの役割を担ったか以上に、どのような仮説と思考で体験を設計したか
-        が伝わることを重視しました。
+        企画・実装・UI・調整・ディレクションを必要に応じて行き来しながら、
+        遊びが伝わる形になるまで試作と検証を重ねています。
+      </p>
+      <p>
+        各作品では、何を作り、どこで迷い、どう直したのかを中心に紹介しています。
       </p>
     </div>
   </section>
@@ -38,7 +69,7 @@
   <section id="works">
     <h2>制作実績</h2>
 
-  <article class="project">
+  <article class="project project-featured project-compact" id="keep-digging">
     <div class="project-header">
       <h3 class="project-title">Keep Digging (Version 2.0)</h3>
       <span class="project-meta">担当：ゲームデザイナー・QA</span>
@@ -67,14 +98,23 @@
       最大8人で地下世界を掘り進め、素材の回収や装備のクラフトを通してさらに深部を目指すマルチプレイ作品。
     </p>
 
+    <div class="spec-item">
+      <h4>公開タイトルのアップデート制作への参加</h4>
+      <p>
+        公開タイトルのVersion 2.0制作に、ゲームデザインとQAの立場で参加しました。
+        詳細は公開できる範囲に留めています。
+      </p>
+    </div>
+
     <div>
       <span class="badge badge-primary">公開タイトル制作</span>
       <span class="badge">Version 2.0</span>
-      <span class="badge">検証視点</span>
+      <span class="badge">ゲームデザイン</span>
+      <span class="badge">QA</span>
     </div>
   </article>
 
-  <article class="project">
+  <article class="project project-featured" id="homespy">
     <div class="project-header">
       <h3 class="project-title">HomeSpy</h3>
       <span class="project-meta">2025/6 - 2026/2 / 担当：企画・実装・検証</span>
@@ -108,10 +148,20 @@
       <span class="badge">検証改善</span>
     </div>
 
+    <details class="project-detail">
+      <summary>HomeSpy の設計と検証を見る</summary>
+
+    <ol class="project-route" aria-label="HomeSpy の読み方">
+      <li><span>課題</span>現実空間で「隠す／探す」の判断を成立させる</li>
+      <li><span>仮説</span>自由度よりも、発想を助ける制約が必要ではないか</li>
+      <li><span>実装</span>デバイス、アプリ、通信を組み合わせて場所依存を減らす</li>
+      <li><span>検証</span>ミニチュア展示と卒業展示で反応を確認する</li>
+    </ol>
+
 
     <div class="spec-grid">
       <div class="spec-item">
-        <h4>面白さの再構成</h4>
+        <h4>課題：現実空間で成立する遊びへの再構成</h4>
         <p>
           「かくれんぼ」を遊んだ時に感じられる、隠れる場所を考える瞬間の独特な緊張と高揚感を、
           大人でも現代の生活空間において体験できないかという問いから制作を開始しました。
@@ -123,7 +173,7 @@
       </div>
 
       <div class="spec-item">
-        <h4>試行錯誤による学びの例</h4>
+        <h4>考えたこと：自由度と迷いの関係</h4>
         <p>
           初期段階では、選択肢が自由であるほどユニークな発想が生まれるという前提から、
           自由度を重視した設計を行っていました。
@@ -140,29 +190,35 @@
     <div class="device-carousel">
       <div class="carousel-header">
         <h4>デバイス写真</h4>
+        <p class="carousel-context">現実の部屋に置いて遊ぶためのデバイス構成。</p>
       </div>
       <div class="carousel-viewport" data-carousel="device-carousel">
         <figure class="carousel-slide is-active">
           <img src="images/homespy/device/homespy-device-01.jpg" alt="HomeSpy デバイス写真 1" loading="lazy">
+          <figcaption>実際の部屋に設置して遊ぶためのデバイス外観。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/device/homespy-device-02.jpg" alt="HomeSpy デバイス写真 2" loading="lazy">
+          <figcaption>隠す場所を考える遊びに合わせたサイズ感の確認。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/device/homespy-device-03.jpg" alt="HomeSpy デバイス写真 3" loading="lazy">
+          <figcaption>持ち運びや設置を想定したデバイス構成。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/device/homespy-device-04.jpg" alt="HomeSpy デバイス写真 4" loading="lazy">
+          <figcaption>現実空間での探索に使う機密デバイス。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/device/homespy-device-05.jpg" alt="HomeSpy デバイス写真 5" loading="lazy">
+          <figcaption>プレイ環境に置いたときの見え方を確認した写真。</figcaption>
         </figure>
         <button class="carousel-btn is-overlay prev" data-dir="-1" aria-label="前へ">‹</button>
         <button class="carousel-btn is-overlay next" data-dir="1" aria-label="次へ">›</button>
       </div>
     </div>
       <div class="spec-item">
-        <h4>技術の選定</h4>
+        <h4>行ったこと：場所を選ばない構成</h4>
         <p>
           「場所問わずどこでも遊べる」ということが一つの目標でした。</br>
           ESP-32、FlutterによるスマホアプリおよびFirebaseを利用して、環境依存を減らしています。
@@ -172,32 +228,39 @@
     <div class="device-carousel">
       <div class="carousel-header">
         <h4>ミニチュアタイプの制作</h4>
+        <p class="carousel-context">展示で短時間に遊びを伝えるため、小型化した検証用セット。</p>
       </div>
       <div class="carousel-viewport" data-carousel="mini-carousel">
         <figure class="carousel-slide is-active">
           <img src="images/homespy/mini/homespy-mini-01.jpg" alt="HomeSpy ミニチュア 1" loading="lazy">
+          <figcaption>展示で短時間に遊べるよう小型化したセット。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/mini/homespy-mini-02.jpg" alt="HomeSpy ミニチュア 2" loading="lazy">
+          <figcaption>隠す場所を選ぶ判断を残したミニチュア構成。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/mini/homespy-mini-03.jpg" alt="HomeSpy ミニチュア 3" loading="lazy">
+          <figcaption>展示卓の中で探索範囲を伝えるための配置。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/mini/homespy-mini-04.jpg" alt="HomeSpy ミニチュア 4" loading="lazy">
+          <figcaption>初見でも遊びの範囲が分かるようにした見立て。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/mini/homespy-mini-05.jpg" alt="HomeSpy ミニチュア 5" loading="lazy">
+          <figcaption>小型化後の探索ルールを検証した状態。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/mini/homespy-mini-06.jpg" alt="HomeSpy ミニチュア 6" loading="lazy">
+          <figcaption>展示で繰り返し遊んでもらうためのセット。</figcaption>
         </figure>
         <button class="carousel-btn is-overlay prev" data-dir="-1" aria-label="前へ">‹</button>
         <button class="carousel-btn is-overlay next" data-dir="1" aria-label="次へ">›</button>
       </div>
     </div>
       <div class="spec-item">
-        <h4>遊びの抽出</h4>
+        <h4>結果：展示に向けた遊びの小型化</h4>
         <p>
           展示会で遊びを提供するためには、遊びの小型化が必要でした。</br>
           ミニチュアを使用し、ルールも簡略にすることで小型化に成功しました。</br>
@@ -208,32 +271,39 @@
     <div class="device-carousel">
       <div class="carousel-header">
         <h4>卒業展示会での展示</h4>
+        <p class="carousel-context">部屋全体を使った展示で、初見の理解と反応を確認しました。</p>
       </div>
       <div class="carousel-viewport" data-carousel="eizo-carousel">
         <figure class="carousel-slide is-active">
           <img src="images/homespy/eizoten/homespy-expo-01.jpg" alt="HomeSpy 映像展示 1" loading="lazy">
+          <figcaption>部屋全体を使って遊びを展示した様子。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/eizoten/homespy-expo-02.jpg" alt="HomeSpy 映像展示 2" loading="lazy">
+          <figcaption>来場者が実際に探索する導線を確認した展示。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/eizoten/homespy-expo-03.jpg" alt="HomeSpy 映像展示 3" loading="lazy">
+          <figcaption>現実空間を使った宝探しとして見せた展示環境。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/eizoten/homespy-expo-04.jpg" alt="HomeSpy 映像展示 4" loading="lazy">
+          <figcaption>遊びの説明と探索体験のつながりを検証した場面。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/eizoten/homespy-expo-05.jpg" alt="HomeSpy 映像展示 5" loading="lazy">
+          <figcaption>展示空間の広さを使ったプレイの様子。</figcaption>
         </figure>
         <figure class="carousel-slide">
           <img src="images/homespy/eizoten/homespy-expo-06.jpg" alt="HomeSpy 映像展示 6" loading="lazy">
+          <figcaption>来場者の反応を見ながら改善点を確認した展示。</figcaption>
         </figure>
         <button class="carousel-btn is-overlay prev" data-dir="-1" aria-label="前へ">‹</button>
         <button class="carousel-btn is-overlay next" data-dir="1" aria-label="次へ">›</button>
       </div>
     </div>
       <div class="spec-item">
-        <h4>展示会場を使用した展示</h4>
+        <h4>結果：卒業展示会での検証</h4>
         <p>
           卒業展示会では、展示する部屋全体を使用した遊びとして展示することができました。</br>
           好意的な反応もいただけた一方、遊びがうまく伝わらない方もいました。</br>
@@ -241,11 +311,8 @@
         </p>
       </div>
 
-    </div>
+    </details>
   </article>
-
-
-
 
     <article class="project">
     <div class="project-header">
@@ -278,31 +345,34 @@
       <span class="badge">スコープ管理</span>
     </div>
 
+    <details class="project-detail">
+      <summary>チーム制作と遊びの核について見る</summary>
+
     <div class="spec-vertical">
       <div class="spec-item">
-        <h4>チームで面白いゲームを作るための取り組み</h4>
+        <h4>課題：短期制作でチームの方向を揃える</h4>
         <p>
           大学で様々なチーム制作を経験する中で、成果は技術だけでなく、
           チーム内の意思疎通や進行設計に大きく左右されると感じました。
           その検証も兼ねて、自らチームを立ち上げ制作を行いました。
         </p>
-        <h5>コミュニケーションエラーの対策</h5>
+        <h5>仮説：最初の認識合わせが完成度に影響する</h5>
         <p>
           初回は対面で会議することで、確実にチームの方向を揃えられるようにしました。
           また、テキストコミュニケーションでも発言の心理的ハードルを下げることを意識しました。
         </p>
-        <h5>モチベーションの維持</h5>
+        <h5>実装・進行：進捗を見える状態にする</h5>
         <p>
           毎日の進捗日記を共有し、小さな前進でも可視化される環境を作りました。
           また、個々人の進捗報告の負担を軽減し、継続的な参加感を保ちました。
         </p>
-        <h5>期間内に完成</h5>
+        <h5>調整：完成を優先したスコープ管理</h5>
         <p>
           完成を最優先に据え、
           早期に「遊べる状態」を作るスケジュールを設定。
           ブラッシュアップの時間を確保できるように意識しました。
         </p>
-        <h4>結果</h4>
+        <h4>結果：完成とチーム満足度</h4>
         <p>
           ありがたいことに、ゲームはそのコンテストで高い評価を得たゲームとなることができました。</br> 
           なにより、チームメンバーがとても高い満足感を得てくれてました。
@@ -312,23 +382,27 @@
       <div class="device-carousel">
         <div class="carousel-header">
           <h4>スクリーンショット</h4>
+          <p class="carousel-context">透明な主人公を、音や痕跡で把握しながら遊ぶ場面。</p>
         </div>
         <div class="carousel-viewport" data-carousel="inkya-carousel">
           <figure class="carousel-slide is-active">
             <img src="images/inkyaUshya/slide/inkya-slide-01.jpg" alt="陰キャ勇者 スクリーンショット 1" loading="lazy">
+            <figcaption>透明な主人公の位置を、周囲の情報から把握する場面。</figcaption>
           </figure>
           <figure class="carousel-slide">
             <img src="images/inkyaUshya/slide/inkya-slide-02.png" alt="陰キャ勇者 スクリーンショット 2" loading="lazy">
+            <figcaption>攻撃を当てる瞬間の手応えを調整したアクション場面。</figcaption>
           </figure>
           <figure class="carousel-slide">
            <img src="images/inkyaUshya/slide/inkya-slide-03.png" alt="陰キャ勇者 スクリーンショット 3" loading="lazy">
+           <figcaption>音や痕跡を頼りにステージを進む構成。</figcaption>
           </figure>
           <button class="carousel-btn is-overlay prev" data-dir="-1" aria-label="前へ">‹</button>
           <button class="carousel-btn is-overlay next" data-dir="1" aria-label="次へ">›</button>
         </div>
       </div>
       <div class="spec-item">
-        <h4>遊びの核</h4>
+        <h4>実装：攻撃が当たる瞬間の手応え</h4>
           <p>
             短期間で完成させる必要があったため、
             一点、遊びの核を綿密に作ろうと考えました。
@@ -342,6 +416,7 @@
             インスペクターから操作可能な汎用的なヒット判定システムを実装しました。
           </p>
       </div>
+    </details>
     </article>
 
     <article class="project">
@@ -378,9 +453,12 @@
         しかし、チーム制作において「軸」と「間の仕事」の重要性を痛感した転換点となった作品です。
       </p>
 
+    <details class="project-detail">
+      <summary>企画の立て直しと調整環境について見る</summary>
+
     <div class="spec-grid">
       <div class="spec-item">
-        <h4>【企画】迷走からの「軸」の抽出</h4>
+        <h4>課題：企画の迷走と判断基準の不足</h4>
         <p>
           制作初期、チームは表面的な問題への対処に終始し、企画が二転三転する「迷走」状態にありました。
           私はメンバーの断片的なアイデアを深く聞き取る中で、ディレクターが言葉にできていない「真にやりたいこと（核）」が別にあることに気づきました。
@@ -391,7 +469,7 @@
       </div>
 
       <div class="spec-item">
-        <h4>【調整】「間の仕事」によるチームへのはたらき</h4>
+        <h4>行ったこと：職種間の隙間を埋める調整</h4>
         <p>
           「与えられたタスクをこなすだけでは、チームは回らない」という事実に直面しました。
           職種間のコミュニケーション不全を解消するため、私は自発的に「隙間」を埋める役割を引き受けました。
@@ -407,29 +485,35 @@
       <div class="device-carousel">
         <div class="carousel-header">
           <h4>スクリーンショット</h4>
+          <p class="carousel-context">スイング移動の手触りと、逃走ルートの見え方を確認する画面。</p>
         </div>
         <div class="carousel-viewport" data-carousel="prison-carousel-1">
           <figure class="carousel-slide is-active">
             <img src="images/prisonbreaksloth/slide/sloth-slide-01.png" alt="脱獄スロース スクリーンショット 1" loading="lazy">
+            <figcaption>スイング移動で逃走する基本画面。</figcaption>
           </figure>
           <figure class="carousel-slide">
             <img src="images/prisonbreaksloth/slide/sloth-slide-02.png" alt="脱獄スロース スクリーンショット 2" loading="lazy">
+            <figcaption>ルート選択と移動の手触りを確認する場面。</figcaption>
           </figure>
           <figure class="carousel-slide">
             <img src="images/prisonbreaksloth/slide/sloth-slide-03.png" alt="脱獄スロース スクリーンショット 3" loading="lazy">
+            <figcaption>障害物や追跡の見え方を確認した画面。</figcaption>
           </figure>
           <figure class="carousel-slide">
             <img src="images/prisonbreaksloth/slide/sloth-slide-04.png" alt="脱獄スロース スクリーンショット 4" loading="lazy">
+            <figcaption>操作の勢いとステージ構成の関係を確認する場面。</figcaption>
           </figure>
           <figure class="carousel-slide">
             <img src="images/prisonbreaksloth/slide/sloth-slide-05.png" alt="脱獄スロース スクリーンショット 5" loading="lazy">
+            <figcaption>ゲーム全体の見え方とプレイ状況を示す画面。</figcaption>
           </figure>
           <button class="carousel-btn is-overlay prev" data-dir="-1" aria-label="前へ">‹</button>
           <button class="carousel-btn is-overlay next" data-dir="1" aria-label="次へ">›</button>
         </div>
       </div>
       <div class="spec-item">
-        <h4>役割</h4>
+        <h4>仮説：実装側から体験の判断材料を補う</h4>
         <p>
           プログラマーとしてゲーム全般を作りつつ、各種仕様やビジュアルなども積極的にメンバーと話してゲーム全般を考えました。
         </p>
@@ -438,32 +522,39 @@
       <div class="device-carousel">
         <div class="carousel-header">
           <h4>環境整備</h4>
+          <p class="carousel-context">企画者がパラメータを触りながら調整できるようにした制作環境。</p>
         </div>
         <div class="carousel-viewport" data-carousel="prison-carousel-2">
           <figure class="carousel-slide is-active">
             <img src="images/prisonbreaksloth/slide/forteam/sloth-team-01.png" alt="脱獄スロース 制作環境スクリーンショット 1" loading="lazy">
+            <figcaption>調整項目を見える状態にした制作画面。</figcaption>
           </figure>
           <figure class="carousel-slide">
             <img src="images/prisonbreaksloth/slide/forteam/sloth-team-02.png" alt="脱獄スロース 制作環境スクリーンショット 2" loading="lazy">
+            <figcaption>非エンジニアでも触りやすいよう整理した項目。</figcaption>
           </figure>
           <figure class="carousel-slide">
             <img src="images/prisonbreaksloth/slide/forteam/sloth-team-03.png" alt="脱獄スロース 制作環境スクリーンショット 3" loading="lazy">
+            <figcaption>挙動と判定を確認しながら調整する画面。</figcaption>
           </figure>
           <figure class="carousel-slide">
             <img src="images/prisonbreaksloth/slide/forteam/sloth-team-04.png" alt="脱獄スロース 制作環境スクリーンショット 4" loading="lazy">
+            <figcaption>ステージやオブジェクトを調整するための環境。</figcaption>
           </figure>
           <figure class="carousel-slide">
             <img src="images/prisonbreaksloth/slide/forteam/sloth-team-05.png" alt="脱獄スロース 制作環境スクリーンショット 5" loading="lazy">
+            <figcaption>パラメータ変更による手触りの確認。</figcaption>
           </figure>
           <figure class="carousel-slide">
             <img src="images/prisonbreaksloth/slide/forteam/sloth-team-06.png" alt="脱獄スロース 制作環境スクリーンショット 6" loading="lazy">
+            <figcaption>チーム内で仕様を共有するために整理した画面。</figcaption>
           </figure>
           <button class="carousel-btn is-overlay prev" data-dir="-1" aria-label="前へ">‹</button>
           <button class="carousel-btn is-overlay next" data-dir="1" aria-label="次へ">›</button>
         </div>
       </div>
       <div class="spec-item">
-        <h4>より面白いゲームを作るために</h4>
+        <h4>実装・結果：調整しやすい制作環境</h4>
         <p>
           企画者がゲームの「手触り」を納得いくまで調整できるよう、Unityエディタ上で直感的にパラメータを操作できる環境を制作。
         </p>
@@ -472,6 +563,7 @@
           また、変数の意味を整理し、簡易的な仕様書も作成することで、非エンジニアでも試行錯誤のサイクルを高速に回せる環境を構築しました。
         </p>
       </div>
+    </details>
     </article>
 
 </section>
@@ -513,15 +605,18 @@
           <img src="https://img.youtube.com/vi/Iy97vBXabSc/hqdefault.jpg" alt="映像制作動画 6">
         </a>
       </div>
+      <details class="project-detail">
+        <summary>編集と色調整で考えていることを見る</summary>
+
       <div class="spec-grid">
         <div class="spec-item">
-          <h4>編集</h4>
+          <h4>仮説：視線と感情の流れを編集で整理する</h4>
           <p>
             編集者というのは料理人です。それまでの工程で作られた素材を受け取り、初めて作品という形にする役割です。その立場から見えることを大切にします。その立場だからこそ守れるものが多くあります。
           </p>
         </div>
         <div class="spec-item">
-          <h4>カラーグレーディング</h4>
+          <h4>実装：色で視線と意味を補助する</h4>
           <p>
             映像の色味を調整し、ただ単に綺麗な映像にするだけではなく、色に意味を付けて演出の１つとして確立させます。特に、カラーグレーディング工程における視点誘導の役割は非常に重要です。
           </p>
@@ -537,6 +632,7 @@
           <li><strong>翻訳の視点：</strong> 一人目の観客として自作を疑い、迷わず理解できる構造へ整える。この視点はゲームUI/UXにも活きています。</li>
         </ul>
       </div>
+      </details>
     </article>
 
     <article class="project">
@@ -555,6 +651,9 @@
 
       <p class="summary">集まった学生をランダムなチームに分けて、3か月で展示するゲームを作るイベント</p>
       <img class="project-image" src="images/bitsummit/bitsummit-2023-poster.png" alt="BitSummit 2023 ポスター" loading="lazy">
+
+      <details class="project-detail">
+        <summary>展示で得た反応と改善を見る</summary>
       
       <div>
         <div class="project-media">
@@ -569,7 +668,7 @@
         <p class="summary">写真に撮ったものが武器になるゲーム</p>
 
       <div class="spec-item">
-        <h4>様々な多種多様な人にゲームを遊んでもらう</h4>
+        <h4>課題：初見でも伝わる展示体験</h4>
         <p>
           Bitsummitには、年齢国籍問わず様々な方が訪れます。
           そういった中でゲームを展示してプレイしてもらうのは、非常に刺激的でした。
@@ -592,7 +691,7 @@
         <p class="summary">リズムノートのように流れてくるものにタイミングよくボタンを押す、デッキ構築ゲーム</p>
 
         <div class="spec-item">
-          <h4>展示によるフィードバック</h4>
+          <h4>結果：展示反応を見ながら改善する</h4>
           <p>
             展示で様々な人にゲームを遊んでもらうと、様々な反応を頂けます。
             その人々の反応を横で見ているとここをこう直せばもっと遊んでもらえると気づきが多くあります。
@@ -601,6 +700,8 @@
           </p>
           </div>
       </div>
+      </div>
+      </details>
     </article>
 
   </section>
@@ -624,7 +725,7 @@
         <ul>
           <li>C# (Unity) — 3年</li>
           <li>C++（競技プログラミング中心） — 半年</li>
-          <li>Python, rect, html, css, javascriptなどは非常に基本的な事であればできます。</li>
+          <li>Python, html, css, javascriptなどは非常に基本的な事であればできます。</li>
         </ul>
       </div>
     </div>
@@ -634,21 +735,21 @@
     <h2>私が約束できる価値</h2>
     <div class="about-box">
       <p>
-        私が約束できることは、面白さを求め続けること、
-        そしてそのために変わり続けることです。
+        私が大切にしているのは、面白さを感覚だけで終わらせず、
+        プレイヤーの理解・判断・操作の流れとして捉えることです。
       </p>
 
       <p>
-        企画であれば設計を変える。
-        実装であれば構造を変える。
-        チームであれば関わり方を変える。
-        目的に辿り着くためなら、自分の役割を固定しません。
+        企画であればルールや導線を整理する。
+        実装であれば手触りを調整できる構造を考える。
+        チーム制作であれば、判断基準を共有する。
+        体験を成立させるために、必要な領域へ横断して関わります。
       </p>
 
       <p>
-        面白さを諦めないこと。
-        そのために、自分を更新し続けること。
-        それが、私の制作における一貫性です。
+        職種名に自分を閉じ込めるのではなく、
+        ゲームにおける体験設計を核に、企画・実装・調整をつなぐこと。
+        それが、私の制作における一貫した姿勢です。
       </p>
     </div>
   </section>
