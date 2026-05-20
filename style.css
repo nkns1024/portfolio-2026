@@ -842,6 +842,20 @@ p {
   overflow-wrap: anywhere;
 }
 
+.project strong,
+.about-box strong {
+  color: color-mix(in srgb, var(--project-accent, var(--accent)) 58%, #ffffff);
+  font-weight: 800;
+}
+.text-mark {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, var(--project-accent, var(--accent)) 74%, #ffffff);
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.18em;
+}
+
 @media (max-width: 960px) {
   header {
     grid-template-columns: 1fr;
