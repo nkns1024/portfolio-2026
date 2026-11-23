@@ -13,6 +13,7 @@
 </div>
 
 <nav class="section-nav" aria-label="ページ内ナビゲーション">
+  <a href="#archive">一覧</a>
   <a href="#works">Works</a>
   <a href="#experience">Experience</a>
   <a href="#skills">Skills</a>
@@ -29,32 +30,77 @@
         企画・実装・調整を行き来しながら、作品ごとに遊びの手応えを探ってきました。
       </p>
       <div class="hero-actions">
-        <a class="hero-button primary" href="#works">制作実績を見る</a>
+        <a class="hero-button primary" href="#archive">制作実績を見る</a>
       </div>
     </div>
 
     <div class="hero-showcase" aria-label="代表的な制作実績">
       <div class="hero-poster">
-        <a class="hero-poster-main" href="#homespy">
-          <img src="images/homespy/homespy-cover-01.jpg" alt="HomeSpy メインビジュアル">
+        <a class="hero-poster-main" href="#ramen">
+          <img src="images/ramen-finished.jpg" alt="代表作 Japanese Ramen Simulator">
         </a>
 
-        <a class="hero-poster-tile tile-inkya" href="#works">
-          <img src="images/inkyaUshya/inkya-icon-16x9.png" alt="陰キャ勇者 メインビジュアル">
+        <a class="hero-poster-tile tile-inkya" href="#keep-digging">
+          <img src="images/KeepDigging/kd2header.jpg" alt="Keep Digging Version 2.0">
         </a>
-        <a class="hero-poster-tile tile-sloth" href="#works">
-          <img src="images/prisonbreaksloth/sloth-cover-01.png" alt="脱獄スロース メインビジュアル">
+        <a class="hero-poster-tile tile-sloth" href="#homespy">
+          <img src="images/homespy/homespy-cover-01.jpg" alt="HomeSpy メインビジュアル">
         </a>
-        <a class="hero-poster-tile tile-overbreathe" href="#experience">
+        <a class="hero-poster-tile tile-overbreathe" href="#bitsummit">
           <img src="images/bitsummit/bitsummit-2024-title.jpg" alt="BitSummit 2024 タイトル画面">
         </a>
 
-        <a class="hero-poster-tile tile-video" href="#experience">
+        <a class="hero-poster-tile tile-video" href="#film">
           <img src="https://img.youtube.com/vi/qd3D4z6Z47Y/hqdefault.jpg" alt="映像制作動画 サムネイル">
         </a>
       </div>
     </div>
   </header>
+
+  <nav id="archive" aria-labelledby="archive-title">
+    <h2 id="archive-title">制作実績一覧</h2>
+    <div class="catalog">
+      <div class="catalog-group">
+        <h3>商業作品</h3>
+        <ul>
+          <li><a href="#ramen">
+            <img src="images/ramen-finished.jpg" alt="" loading="lazy">
+            <strong>Japanese Ramen Simulator</strong><span>ラーメン屋のバイトでの遊びをゲームに落とし込みました。</span>
+          </a></li>
+          <li><a href="#keep-digging">
+            <img src="images/KeepDigging/kd2header.jpg" alt="" loading="lazy">
+            <strong>Keep Digging</strong><span>Version 2.0制作に、プランナー・QAとして参加しました。</span>
+          </a></li>
+        </ul>
+      </div>
+      <div class="catalog-group">
+        <h3>学生時代・自主制作</h3>
+        <ul>
+          <li><a href="#homespy">
+            <img src="images/homespy/homespy-cover-01.jpg" alt="" loading="lazy">
+            <strong>HomeSpy</strong><span>隠れる場所を考える瞬間の独特な緊張と高揚感</span>
+          </a></li>
+          <li><a href="#inkya">
+            <img src="images/inkyaUshya/inkya-icon-16x9.png" alt="" loading="lazy">
+            <strong>陰キャ勇者</strong><span>自らチームを立ち上げ制作を行いました。</span>
+          </a></li>
+          <li><a href="#sloth">
+            <img src="images/prisonbreaksloth/sloth-cover-01.png" alt="" loading="lazy">
+            <strong>脱獄スロース</strong><span>職種間の隙間を埋める「間の仕事」</span>
+          </a></li>
+          <li><a href="#film">
+            <img src="images/eizo/PF2-4.png" alt="" loading="lazy">
+            <strong>映像制作</strong><span>編集者というのは料理人です。</span>
+          </a></li>
+          <li><a href="#bitsummit">
+            <img src="images/bitsummit/bitsummit-2024-title.jpg" alt="" loading="lazy">
+            <strong>BitSummit GameJam</strong><span>居ても立っても居られなくなり、現場で改修を重ねました。</span>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
 
   <div class="about-box intro-box">
     <p class="intro-lead">
@@ -81,19 +127,56 @@
 
   <section id="works">
     <h2>制作実績</h2>
+    <div>
+      <article class="project project-featured" id="ramen">
+        <div class="project-header">
+          <h3 class="project-title">Japanese Ramen Simulator</h3>
+          <span class="project-meta">2026年10月9日 早期アクセス開始 / 担当：プランナー・QA</span>
+        </div>
+
+        <div class="one-line">Steam向けタイトル『Japanese Ramen Simulator』にプランナー・QAとして参加。</div>
+
+        <dl class="project-facts" aria-label="作品情報">
+          <div><dt>担当</dt><dd>プランナー・QA</dd></div>
+          <div><dt>形式</dt><dd>Steam向けシングル・マルチプレイ作品</dd></div>
+          <div><dt>範囲</dt><dd>開発初期 ~</dd></div>
+          <div><dt>リンク</dt><dd><a href="https://store.steampowered.com/app/4968640/?l=japanese" target="_blank" rel="noopener">Steamページ</a></dd></div>
+        </dl>
+
+        <img class="project-image" src="images/ramen-finished.jpg" alt="チャーシューや味玉を盛り付けたゲーム内のラーメン" loading="lazy">
+
+        <div class="project-media">
+          <p class="caption">▶ <a class="caption-link" href="https://store.steampowered.com/app/4968640/?l=japanese" target="_blank" rel="noopener">Steamページ</a></p>
+        </div>
+
+        <p class="summary">食材の仕込み、調理、配膳、接客、片付けまで、ラーメン店の仕事をまるごと体験。</p>
+
+        <div class="spec-item">
+          <h4>ラーメン作りの企画</h4>
+          <p><strong>プランナー・QAとして制作に参加</strong>しました。ラーメン屋のバイトでの遊びをゲームに落とし込みました。</p>
+        </div>
+
+        <div>
+          <span class="badge badge-primary">Planner</span>
+          <span class="badge">QA</span>
+          <span class="badge">Steam</span>
+          <span class="badge">Published Title</span>
+        </div>
+      </article>
+    </div>
 
   <article class="project project-featured project-compact" id="keep-digging">
     <div class="project-header">
       <h3 class="project-title">Keep Digging (Version 2.0)</h3>
-      <span class="project-meta">担当：ゲームデザイナー・QA</span>
+      <span class="project-meta">担当：プランナー・QA</span>
     </div>
 
     <div class="one-line">
-      Steam向けタイトル『Keep Digging』Version 2.0において、ゲームデザインおよびQAを担当。
+      Steam向けタイトル『Keep Digging』のVersion 2.0制作にプランナー・QAとして参加。
     </div>
 
     <dl class="project-facts" aria-label="作品情報">
-      <div><dt>担当</dt><dd>ゲームデザイナー・QA</dd></div>
+      <div><dt>担当</dt><dd>プランナー・QA</dd></div>
       <div><dt>形式</dt><dd>Steam向けマルチプレイ作品</dd></div>
       <div><dt>範囲</dt><dd>Version 2.0制作</dd></div>
       <div><dt>リンク</dt><dd><a href="https://store.steampowered.com/app/3585800/Keep_Digging/" target="_blank" rel="noopener">Steamページ</a></dd></div>
@@ -114,19 +197,20 @@
     <div class="spec-item">
       <h4>公開タイトルのアップデート制作への参加</h4>
       <p>
-        公開タイトルのVersion 2.0制作に、<strong>ゲームデザインとQAの立場で参加</strong>しました。
+        公開タイトルのVersion 2.0制作に、<strong>プランナー・QAとして参加</strong>しました。
         担当内容は守秘義務に配慮し、公開可能な範囲で記載しています。
       </p>
     </div>
 
     <div>
-      <span class="badge badge-primary">Game Designer</span>
+      <span class="badge badge-primary">Planner</span>
       <span class="badge">QA</span>
       <span class="badge">Steam</span>
       <span class="badge">Published Title</span>
     </div>
   </article>
 
+  <h2>学生時代・自主制作</h2>
   <article class="project project-featured" id="homespy">
     <div class="project-header">
       <h3 class="project-title">HomeSpy</h3>
@@ -329,7 +413,7 @@
     </details>
   </article>
 
-    <article class="project">
+    <article class="project" id="inkya">
     <div class="project-header">
       <h3 class="project-title">陰キャ勇者</h3>
       <span class="project-meta">1週間 (Unity1week) / 担当：ディレクター・プログラマー</span>
@@ -435,7 +519,7 @@
     </details>
     </article>
 
-    <article class="project">
+    <article class="project" id="sloth">
     <div class="project-header">
       <h3 class="project-title">脱獄スロース</h3>
       <span class="project-meta">4ヶ月 / 担当：プログラマー</span>
@@ -587,7 +671,7 @@
 
   <section id="experience">
 
-    <article class="project">
+    <article class="project" id="film">
       <div class="project-header">
         <h3 class="project-title">映像制作</h3>
         <span class="project-meta">3.5年 / 20本以上の制作</span>
@@ -652,7 +736,7 @@
       </details>
     </article>
 
-    <article class="project">
+    <article class="project" id="bitsummit">
       <div class="project-header">
         <h3 class="project-title">BitSummit GameJam</h3>
         <span class="project-meta">2023年 プランナー / 2024年 プログラマー</span>
